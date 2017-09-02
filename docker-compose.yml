@@ -1,6 +1,3 @@
-# Make sure that the neo4j password and username environment variables match for
-# both containers.
-
 version: '3'
 services:
   web:
@@ -21,4 +18,7 @@ services:
       - "7473:7473"
       - "7687:7687"
     volumes:
-      - ./neo4j/data:/data
+      - $HOME/neo4j/data:/data
+      - $HOME/neo4j/import:/var/lib/neo4j/import
+      - $HOME/neo4j/logs:/logs
+      - $HOME/neo4j/conf/:/conf/

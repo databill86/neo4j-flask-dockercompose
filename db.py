@@ -1,6 +1,6 @@
-from neo4j.v1 import GraphDatabase, basic_auth
-import time
 import os
+
+from neo4j.v1 import GraphDatabase, basic_auth
 
 driver = None
 
